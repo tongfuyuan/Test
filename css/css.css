@@ -1,0 +1,345 @@
+﻿.content {
+    width: 1920px;
+    height: 1080px;
+    background: url("../images/bg.jpg") no-repeat top left;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    width: 1920px;
+}
+
+img.fenxi {
+    width: 95.0521%;
+    margin-top: 4.2593%;
+}
+
+.bsgrid tr.even_index_row td {
+    background-color: #0f2b5c;
+}
+
+.bsgrid tr td {
+    background-color: #111f44;
+}
+
+.bsgrid th, .bsgrid td {
+    padding: 3px;
+    border: solid 1px #2a4fc9;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8em;
+    font-family: "ArialMT";
+    font-size: 14px;
+}
+
+.bsgrid th {
+    background-color: #0f2b5c;
+    font-family: "SimHei";
+    font-size: 14px;
+    color: #71fffe;
+
+}
+
+td#searchTable_pt {
+    display: none;
+}
+
+.left_con {
+    width: 492px;
+    height: 940px;
+
+    position: absolute;
+    top: 108px;
+    left: 36px;
+    text-align: center;
+}
+
+.middle_con {
+    width: 812px;
+    height: 848px;
+
+    position: absolute;
+    top: 200px;
+    left: 555px;
+    text-align: center;
+}
+
+p.middle_p1 {
+    font-size: 25px;
+    font-family: "SimHei";
+    color: #71fffe;
+    position: absolute;
+    left: 54px;
+    top: 18px;
+}
+
+p.middle_p2 {
+    font-size: 14px;
+    font-family: "SimHei";
+    color: #fff;
+    position: absolute;
+    left: 54px;
+    top: 103px;
+}
+
+p.middle_p2 img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+p.middle_p3 img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+p.middle_p3 {
+    font-size: 14px;
+    font-family: "SimHei";
+    color: #fff;
+    position: absolute;
+    left: 54px;
+    top: 140px;
+}
+
+img.map {
+    width: 770px;
+    position: absolute;
+    left: 18px;
+    top: 196px;
+}
+
+.middle_anniu {
+    position: absolute;
+    right: 20px;
+    top: 38px;
+    width: 102px;
+}
+
+img.anniu_top {
+    width: 68px;
+    cursor: pointer;
+}
+
+img.anniu_bottom {
+    width: 68px;
+    margin-top: 29px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+img.anniu_left {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 36px;
+    cursor: pointer;
+}
+
+img.anniu_right {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    width: 36px;
+    cursor: pointer;
+}
+
+img.anniu_bigger {
+    margin-top: 22px;
+    width: 42px;
+    cursor: pointer;
+}
+
+img.anniu_smaller {
+    margin-top: 22px;
+    width: 42px;
+    display: block;
+    margin: 22px auto;
+    cursor: pointer;
+}
+
+p.left_p1 {
+    font-size: 20px;
+    font-family: "SimHei";
+    color: #fff;
+    margin-top: 52px;
+}
+
+p.left_p2 {
+    font-size: 20px;
+    font-family: "adobeHeitiStd-Regular";
+    color: #71fffe;
+    margin-top: -5px;
+}
+
+p.left_p2 span {
+    font-family: "ArialMT";
+    font-size: 40px;
+}
+
+.left_con .num {
+    margin: 16px auto;
+    overflow: hidden;
+    zoom: 1;
+    width: 360px;
+}
+
+.left_con .num ul li {
+    float: left;
+    display: block;
+    width: 78px;
+    height: 91px;
+    background: url("../images/num.png") no-repeat center center;
+    margin-right: 12px;
+    font-family: "Impact";
+    font-size: 72px;
+    color: #1f1f1f;
+    text-align: center;
+    line-height: 91px;
+}
+
+img.biaopan {
+    width: 400px;
+    margin: 49px auto;
+    margin-bottom: 0;
+}
+
+img.pointer {
+    width: 73px;
+    margin-top: -209px;
+    margin-left: 21px;
+    transform-origin: 42% 84%;
+    -webkit-transform-origin: 42% 84%;
+    -moz-transform-origin: 42% 84%;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+}
+
+.car {
+    width: 182px;
+    height: 256px;
+    background: url("../images/car_xian.png") no-repeat center center;
+    margin-top: 77px;
+    margin-left: 58px;
+    position: relative;
+}
+
+.car img {
+    width: 57px;
+
+}
+
+.car img.car1 {
+    position: absolute;
+    left: 108px;
+    top: 0
+}
+
+.car img.car3 {
+    position: absolute;
+    left: 108px;
+    top: 150px;
+}
+
+.car img.car2 {
+    position: absolute;
+    left: 16px;
+    top: 74px;
+}
+
+div.zongji {
+    position: absolute;
+    top: 621px;
+    left: 289px;
+    text-align: left;
+}
+
+p.zongji {
+    font-size: 18px;
+    font-family: "SimHei";
+    color: #fff;
+}
+
+p.zongji_num {
+    font-size: 36px;
+    font-family: "Impact";
+    color: #71fffe;
+    letter-spacing: 5px;
+}
+
+div.lixian {
+    position: absolute;
+    top: 763px;
+    left: 289px;
+    text-align: left;
+}
+
+p.lixian {
+    font-size: 18px;
+    font-family: "SimHei";
+    color: #fff;
+}
+
+p.lixian_num {
+    font-size: 36px;
+    font-family: "Impact";
+    color: #e90d48;
+    letter-spacing: 5px;
+}
+
+.right_con {
+    width: 492px;
+    height: 940px;
+
+    position: absolute;
+    top: 108px;
+    right: 36px;
+    text-align: center;
+}
+
+p.right_p1 {
+    font-size: 25px;
+    font-family: "SimHei";
+    color: #71fffe;
+    position: absolute;
+    top: 17px;
+    left: 221px;
+}
+
+p.right_p2 {
+    width: 96px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+    font-family: "SimHei";
+    color: #71fffe;
+    background-color: #2a4fc9;
+    margin: 62px auto 26px;
+}
+
+img.logo {
+    width: 95px;
+    position: absolute;
+    top: 40px;
+    right: 44px;
+}
+
+#time {
+    position: absolute;
+    left: 780px;
+    top: 153px;
+    font-family: "SimHei";
+    font-size: 30px;
+    color: #71fffe;
+}
+#time  span{
+    margin-left: 33px;
+}

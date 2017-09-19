@@ -1,0 +1,162 @@
+html,body, div, address, blockquote, iframe, ul, ol, dl, dt, dd, li, dl, h1, h2, h3, h4, h5, h6, p, pre, table, caption, th, td, form, legend, fieldset, input, button, select, textarea, a, center, strong, b, i { margin:0;padding:0; outline:none;}
+html{ overflow-x: hidden; overflow-y:scroll;}
+body,button,input,select,textarea{font:12px/1.5 "微软雅黑",helvetica,Arial,sans-serif; color:#555;}
+ul,li { list-style-type:none; }
+li { vertical-align:bottom; zoom:1;}
+img { border:0;vertical-align:middle; -ms-interpolation-mode: bicubic;/*解决IE7图片缩放时失帧的问题*/}
+a { text-decoration:none; color:#555;}
+a:hover { color:#da154a; text-decoration:underline;}
+.cls { clear:both; +display:inline;_margin:0;_padding:0; _width:0; _height:0; }
+button,input,select,textarea{vertical-align:baseline;*vertical-align:middle;}
+button,input{line-height:normal;*overflow:visible;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;}
+input[type="checkbox"]{vertical-align:bottom;*vertical-align:baseline;}
+input[type="radio"]{vertical-align:sub;}
+input{_vertical-align:text-bottom;}
+input[type="search"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0;}
+textarea{overflow:auto;vertical-align:top;}
+input:focus,textarea:focus,select:focus{outline-width:0;}
+select{background-color:transparent; border: 1px solid #cecece;}
+label{font-weight:normal;}
+label.required:after{color:red;content:"*";font-family:"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;}
+button,input[type="submit"],input[type="reset"],input[type="button"]{overflow:visible;}
+.clearfix:before,.clearfix:after{ content:" "; display:block; height:0; visibility:hidden; clear:both; overflow:hidden;}
+.clearfix{zoom:1;}
+.clearfix:after{clear:both;}
+table {border-collapse: collapse;border-spacing: 0;}
+th,td{padding:0;vertical-align:middle;}
+.hidden { display: none; }
+h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size: inherit}
+em,i{ font-style: normal;}
+.fl{float:left;}
+.fr{float:right;}
+/*reset.css*/
+
+/*============================================================================================================================================*/
+
+#header{ width: 100%; min-width: 1200px; background: #fff;}
+.top{ width: 100%; min-width: 1200px; line-height: 34px; border-bottom: 1px solid #e0e0e0;}
+.topCont{ width: 1200px; margin: 0 auto; text-align: right; color: #444;}
+.topCont li{ display: inline-block; +display: inline; padding: 0 11px 0 7px; background: url(../images/index1_03.png) no-repeat right center; position: relative;}
+.topCont li.last{ background: none; padding-right: 0;}
+.topCont li a{ color: #5f5f5f;}
+.topCont li.red a{ color: #db1f51;}
+.topCont li span.phone{ padding-left: 19px; background: url(../images/index1_05.png) no-repeat left center;}
+.topCont li span.atten{ padding-left: 15px; background: url(../images/index1_08.png) no-repeat left center;}
+.topCont li span.tel{ padding-left: 18px; background: url(../images/index1_11.png) no-repeat left center; font-weight: bold; color: #DB1F51;}
+.helpHead{ border: 1px solid #DB1F51; background: #fff; width: 100%; position: absolute; left: 0; top: 30px; z-index: 200; text-align: center; line-height: 20px; display: none;}
+.helpHead a{ display: block;}
+.focus{ width: 256px; position: absolute; right: 0; top: 34px; background: #fff; border: 1px solid #DB1F51; z-index: 999; display: none;}
+.focusLeft{ width: 82px; height: 128px; padding: 0 10px; margin: 10px 0; border-right: 1px solid #ccc; float: left;}
+.focusRight{ padding: 0 10px; margin: 10px 0; float: right;}
+.head{ width: 1200px; margin: 0 auto; padding: 20px 0 15px; position: relative; z-index: 30;}
+.logo{ width: 275px; float: left;}
+.logo img{ float: left;}
+.logo p{ width: 81px; font: 13px/20px "微软雅黑"; margin:9px 0 0 177px; border-left: 1px solid #b7b7b7; padding-left: 14px;}
+.animate{ position: absolute; left: 303px; top: 14px;}
+.store{ width: 208px; float: right; padding-top: 9px;}
+.store a{ text-decoration: none;}
+.store img{ float: left;}
+.store p{ width: 115px; margin:5px 0 0 80px; font: 13px/15px "微软雅黑"; border-left: 1px solid #b7b7b7; padding-left: 12px;}
+.searchCont{ width: 485px; float: right; margin-right: 25px; padding-top: 5px; position: relative;}
+.search{ height: 38px; background: #db1f51; margin-bottom: 5px;}
+.slideCont{ width: 415px; height: 32px; background: #fff; margin: 3px 0 0 3px; float: left;}
+.btn_search{ width: 65px; height: 38px; border: none; background: #DB1F51 url(../images/index1_21-08.png) no-repeat 18px 8px;}
+.type_1{ width: 87px; height: 24px; float: left; border-right: 1px solid #cfcfcf; text-align: center; margin-top: 4px; position: relative;}
+.type_1 span{ text-align: center; line-height: 24px; color: #db1f51; padding-right: 12px; background: url(../images/index1_30.png) no-repeat right center;}
+.slideList{ width: 88px; padding-top: 5px; background: #fff; position: absolute; z-index: 29; text-align: left; line-height: 24px; top: 23px; left: 0; display: none;}
+.slideList ul{ border: 1px solid #db1f51; border-top: none;}
+.slideList li{ padding-left: 12px; cursor: pointer;}
+.slideList li:hover{ background: #DB1F51; color: #fff;}
+.text_search{ width: 280px; height: 32px; border: none; line-height: 32px; margin-left: 12px; float: left;}
+.icon_search{ width: 23px; height: 32px; background: url(../images/index1_33.png) no-repeat center; float: right;}
+.slideList2{ position: absolute; left: 90px; top: 40px; width: 327px; border: 1px solid #db1f51; border-top: none; background: #fff; line-height: 24px; z-index: 30; display: none;}
+.slideList2 a{ width: 315px; padding-left: 12px; display: block;}
+.slideList2 a:hover{ background: #DB1F51; color: #fff; text-decoration: none;}
+
+.menu{ width: 100%; min-width: 1200px; height: 39px; background: #1c1c1c; position: relative; z-index: 22;}
+#nav{ font: 15px/39px "微软雅黑"; color: #fff; width: 1200px; margin: 0 auto; position: relative;}
+.navList{ width: 240px; position: absolute; left: 0; top: 0;}
+.navList h2{ text-align: center; font-size: 17px;}
+.typeList{ width: 240px; height: 454px; overflow: hidden; background: #f7f7f7; position: absolute; z-index: 9; box-shadow: 4px 4px 6px rgba(82, 70, 70, 0.24);}
+.subMenu li{ padding: 6px 0 6px 16px; border-bottom: 1px solid #d3d3d3;}
+.subMenu li.last{ border-bottom: none;}
+.subMenu li.hover{ background: #958282;}
+.subMenu li h3{ font-weight: bold;}
+.subMenu li h3 a{ color: #434343;}
+.subMenu li.hover h3 a{ color: #fff;}
+.subMenu li h3 i{ display: inline-block; +display: inline; width: 42px; height: 37px; background: url(../images/index1_49.jpg) no-repeat 0 0; vertical-align: middle; margin-right: 21px;}
+.subMenu li h3 i.zw{ background-position:0 -70px ;}
+.subMenu li h3 i.qsn{ background-position:0 -140px ;}
+.subMenu li h3 i.sf{ background-position:0 -210px ;}
+.subMenu li h3 i.yx{ background-position:0 -280px ;}
+.subMenu li.hover h3 i.kct{ background-position:-42px 0px ;}
+.subMenu li.hover h3 i.zw{ background-position:-42px -70px ;}
+.subMenu li.hover h3 i.qsn{ background-position:-42px -140px ;}
+.subMenu li.hover h3 i.sf{ background-position:-42px -210px ;}
+.subMenu li.hover h3 i.yx{ background-position:-42px -280px ;}
+.subMenu li p{ font-size: 12px; line-height: 1.8;}
+.subMenu li p a{ color: #434343; margin-right: 12px; white-space: nowrap;}
+.subMenu li.hover p a{ color: #fff;}
+.typeCont{ position: absolute; top: 39px; left: 240px; z-index: 8; box-shadow: 2px 2px 4px #ccc; overflow: hidden; width: 0;}
+.typeCont_box{ width: 647px; height: 430px; padding: 24px 40px 0; background: #fff; display: none;}
+.typeCont_box li{ padding-bottom: 15px; border-bottom: 1px solid #ededed; margin-bottom: 15px;}
+.typeCont_box li.last{ border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+.typeCont_box li .type_left{ width: 60px; float: left; color: #333; font-weight: bold; line-height: 25px;}
+.typeCont_box li .type_right{ width: 575px; float: right; color: #e5e5e5; font: 12px/25px "微软雅黑";}
+.typeCont_box li .type_right strong{ color: #333;}
+.typeCont_box li .type_right a{ white-space: nowrap; display: inline-block;}
+.typePic{ width: 720px; position: absolute; right: 0; bottom: 0;}
+.headList{ width: 960px; float: right;}
+.headList ul{ width: 985px;}
+.headList li{ width: 117px; float: left; text-align: center; margin-right: 23px; position: relative;}
+.headList li a{ display: block; color: #fff;}
+.headList li a.current,.headList li a:hover{ background: #db1f51; text-decoration: none;}
+.headList li i{ display: block; width: 30px; height: 15px; position: absolute; top: -2px; left: 84px; background: url(../images/index1_45.png) no-repeat;}
+
+.mainbody{ width: 1200px; margin: 0 auto 30px;}
+
+.subNav{ width: 100%; min-width: 1200px; background: #fff; padding: 20px 0 16px; border-top: 1px solid #dfdfdf; position: relative; z-index: 2;}
+.subNav ul{ width: 1199px; margin: 0 auto; border-right: 1px solid #e7e7e7;}
+.subNav li{ width: 184px; border-left: 1px solid #E7E7E7; float: left; padding: 22px 0 26px 54px;}
+.subNav li i{ display: block; width: 53px; height: 53px; float: left; margin-right: 15px;}
+.subNav li i.subIcon_1{ background: url(../images/index2_147.png) no-repeat;}
+.subNav li i.subIcon_2{ background: url(../images/index2_150.png) no-repeat;}
+.subNav li i.subIcon_3{ background: url(../images/index2_152.png) no-repeat;}
+.subNav li i.subIcon_4{ background: url(../images/index2_154.png) no-repeat;}
+.subNav li i.subIcon_5{ background: url(../images/index2_156.png) no-repeat;}
+.subNav li p{ float: left; font: 16px/20px "微软雅黑"; color: #676767;}
+.subNav li p strong{ font: bold 18px/32px "微软雅黑"; display: block;}
+
+.mainBox{ width: 100%; min-width: 1200px; background: #e9e9e9; height: auto; overflow: hidden; position: relative; z-index: 2;}
+.subMenu_footer{ position: relative; padding: 50px 0 25px; border-bottom: 1px solid #d1d1d1; margin-bottom: 17px;}
+.code{ width: 110px; position: absolute; left: 388px; top: 50px;}
+.subMenu_footer li{ width: 180px; padding-left: 5px;}
+.subMenu_footer li h3{ font-size: 14px; font-weight: bold; color: #484848; margin-bottom: 10px;}
+.subMenu_footer li a{ display: block; line-height: 28px; color: #686868;}
+.subMenu_footer li.subContact{ width: 212px;}
+
+.linkType{ width: 69px; float: left;}
+.linkType li{ color: #4d4d4d; background: #D1D1D1; text-align: center; line-height: 25px; margin-bottom: 9px; cursor: pointer;}
+.linkType li.st021{ background: #adadad; color: #fff;}
+.linkCont{ width: 1106px; float: right; line-height: 24px;}
+.linkCont a{ display: inline-block; white-space: nowrap;}
+
+#footer{ width: 100%; min-width: 1200px; background: #4d4848; text-align: center; color: #fff; line-height: 22px; padding: 20px 0; position: relative; z-index: 2;}
+#footer a{ color: #fff;}
+#footer p{ color: #a6a4a4; padding-top: 5px;}
+
+.floatBox{ width: 70px; height: 320px; border: 1px solid #e0e0e0; position: fixed; right: 10px; top: 100px; z-index: 999;}
+.floatBox a{ display: block; width: 100%; text-align: center; height: 25px; padding-top: 55px; color: #4e4e4e; background: url(../images/index1_38.png) no-repeat 0 0; transition: all 0.3s ease 0; text-decoration: none;}
+.floatBox a:hover{ color: #fff;}
+.floatBox a.float_1{ background-position: 0 0;}
+.floatBox a.float_2{ background-position: 0 -80px;}
+.floatBox a.float_3{ background-position: 0 -160px;}
+.floatBox a.float_4{ background-position: 0 -240px;}
+.floatBox a.float_1:hover{ background-position: -70px 0;}
+.floatBox a.float_2:hover{ background-position: -70px -80px;}
+.floatBox a.float_3:hover{ background-position: -70px -160px;}
+.floatBox a.float_4:hover{ background-position: -70px -240px;}
+
