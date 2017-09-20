@@ -61,16 +61,9 @@
     </div>
     <div class="middle_con">
         <p class="middle_p1">各地车场在线情况</p>
-        <p class="middle_p2"><img src="images/green.png" alt="">在线车场</p>
-        <p class="middle_p3"><img src="images/red.png" alt="">离线车场</p>
 
         <div class="middle_anniu">
-            <img src="images/top.png" alt="" class="anniu_top">
-            <img src="images/bottom.png" alt="" class="anniu_bottom">
-            <img src="images/left.png" alt="" class="anniu_left">
-            <img src="images/right.png" alt="" class="anniu_right">
-            <img src="images/bigger.png" alt="" class="anniu_bigger">
-            <img src="images/smaller.png" alt="" class="anniu_smaller">
+
         </div>
     </div>
     <div id="map-wrap" style=" width: 960px;height: 1063px;position: absolute;left:478px;top:171px"></div>
@@ -95,13 +88,7 @@
         {"date": "2015.01.22", "name": "妍", "money": "9.90元"},
         {"date": "2014.12.08", "name": "May", "money": "21.00元"}
     ];
-//    var countMoney = 0;
-//    $.each(localData, function (i, data) {
-//        if (!isNaN(data['money'].replace('元', ''))) {
-//            countMoney += parseFloat(data['money'].replace('元', ''));
-//        }
-//    });
-//    $('#countMoney').append(countMoney + '元');
+
     var gridObj;
     $(function () {
         gridObj = $.fn.bsgrid.init('searchTable', {
@@ -135,21 +122,13 @@
             show:'true',
             data:['车场总量','在线车场'],
             x:'right',
+
             itemGap:40,
             itemWidth: 10,
             itemHeight: 10,
             textStyle:{color:'rgba(255,255,255,0.7)',fontSize:'14px',fontFamily:'AdobeHeitiStd-Regular'},
         },
-        toolbox: {
-            show : false,
-            feature : {
-                mark : {show: true},
-                dataView : {show: true, readOnly: false},
-                magicType : {show: true, type: ['line', 'bar']},
-                restore : {show: true},
-                saveAsImage : {show: true}
-            }
-        },
+
         calculable : true,
         grid: {
             width:'88%',
@@ -241,16 +220,13 @@
 </script>
 <script type="text/javascript">
     var myChart2 = echarts.init(document.getElementById('map-wrap'));
-    var params=[
-        {name: '海门', value: [121.15, 31.89, 90],num:'104'},
-        {name: '鄂尔多斯', value: [109.781327, 39.608266, 120],num:'114'},
-        {name: '招远', value: [120.38, 37.35, 142],num:'124'},
-    ];
+
+
 
     var option={
         geo:{
             map:'china',
-
+            roam:true,
             itemStyle:{
                 normal:{
                     areaColor: '#103260',
@@ -261,55 +237,73 @@
                 }
             }
         },
+        legend:{
 
+            data:['在线车场','离线车场'],
+            orient: 'vertical',
+            x:'left',
+            padding:140,
+            itemGap:20,
+            textStyle:{
+                fontSize:14,
+
+                fontFamily:"SimHei",
+                color:"#fff"
+
+            }
+        },
         tooltip : {
             trigger: 'item',
 
             formatter: function (params,ticket,callback) {
                 console.log(params);
-                var res = '车场';
-                for (var i = 0, l = params.length; i < l; i++) {
-                    res += '<br/>' + params[i].name + ' : ' + params[i].seriesName;
-                }
+                var res = '<div class="e-tooltip"><p class="parking">'+params.data.parking+'</p><p>进出口数量:'+params.data.num+'</br>运维负责人:'+params.data.personName+'</p><p class="right">总车位数:'+params.data.parkingSpace+'</br>联系方式:'+params.data.phone+'</p></div>';
+
+
                 setTimeout(function (){
                     // 仅为了模拟异步回调
                     callback(ticket, res);
-                }, 1000);
+                }, 1);
                 return 'loading';
+            },
+            textStyle:{
+                align:'left'
             }
         },
 
 
-        roamController: {
-            show: true,
-            zlevel: 0,
-            z: 4,
-            x: 'left',
-            y: 'top',
-            width: 80,
-            height: 120,
-            backgroundColor: 'rgba(0,0,0,0)',
-            borderColor: '#ccc',
-            borderWidth: 0,
-            padding: 5,
-            fillerColor: '#fff',
-            handleColor: '#6495ed',
-            step: 15,
-            mapTypeControl: {
-                'china': true
-            }
-        },
+//        roamController: {
+//            show: true,
+//            zlevel: 0,
+//            z: 4,
+//            x: 'left',
+//            y: 'top',
+//            width: 80,
+//            height: 120,
+//            backgroundColor: 'rgba(0,0,0,0)',
+//            borderColor: '#ccc',
+//            borderWidth: 0,
+//            padding: 5,
+//            fillerColor: '#fff',
+//            handleColor: '#6495ed',
+//            step: 15,
+//            mapTypeControl: {
+//                'china': true
+//            }
+//        },
+
 
         series: [
             {
                 name: '在线车场', // series名称
                 type: 'scatter', // series图表类型
                 coordinateSystem: 'geo',
+                roam:true,
                 data:[
 
-                    {name: '海门', value: [121.15, 31.89, 90],num:'104'},
-                    {name: '鄂尔多斯', value: [109.781327, 39.608266, 120],num:'114'},
-                    {name: '招远', value: [120.38, 37.35, 142],num:'124'},
+                    {name: '海门', value: [121.15, 31.89, 90],parking:'停车场1',num:'801',parkingSpace:'301',personName:'张一',phone:'15654891'},
+                    {name: '鄂尔多斯', value: [109.781327, 39.608266, 120],parking:'停车场2',num:'802',parkingSpace:'302',personName:'张二',phone:'15654892'},
+                    {name: '招远', value: [120.38, 37.35, 142],parking:'停车场3',num:'803',parkingSpace:'303',personName:'张三',phone:'15654893'},
 
 
                 ],
@@ -329,9 +323,9 @@
                 type: 'scatter', // series图表类型
                 coordinateSystem: 'geo',
                 data:[
-                    {name: '合肥', value: [117,27.31,86]},
-                    {name: '武汉', value: [114,31.30,52]},
-                    {name: '舟山', value: [122.207216, 29.985295, 123]}
+                    {name: '合肥', value: [117,27.31,86],parking:'停车场4',num:'804',parkingSpace:'304',personName:'张四',phone:'15654894'},
+                    {name: '武汉', value: [114,31.30,52],parking:'停车场5',num:'805',parkingSpace:'305',personName:'张五',phone:'15654895'},
+                    {name: '舟山', value: [122.207216, 29.985295, 123],parking:'停车场6',num:'806',parkingSpace:'306',personName:'张六',phone:'15654896'}
                 ],
                 itemStyle:{
                     normal:{

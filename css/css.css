@@ -3,16 +3,18 @@
     height: 1080px;
     background: url("../images/bg.jpg") no-repeat top left;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -960px;
+
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 50%;*/
+    /*margin-left: -960px;*/
+    position: relative;
     text-align: center;
     color: #fff;
 }
 
 body {
-    width: 1920px;
+    overflow: auto;
 }
 
 img.fenxi {
@@ -64,7 +66,7 @@ td#searchTable_pt {
 .middle_con {
     width: 812px;
     height: 848px;
-
+    overflow: hidden;
     position: absolute;
     top: 200px;
     left: 555px;
@@ -342,4 +344,23 @@ img.logo {
 }
 #time  span{
     margin-left: 33px;
+}
+.e-tooltip{
+    padding: 3px;
+    text-align: left;
+    position: relative;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.e-tooltip p{
+    font-family: "黑体";
+    font-size: 14px;
+    color: #fff;
+
+}
+.e-tooltip p.parking{
+    font-size: 20px;
+}
+.bsgrid tr.selected.selected_color td {
+    background-color: rgba(0,0,0,0)!important;
 }
