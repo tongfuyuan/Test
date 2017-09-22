@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var option = {
+        geo: {
+            map: 'china',
+
+            itemStyle: {
+                normal: {
+                    areaColor: '#103260',
+                    borderColor: '#039ef2'
+                },
+                emphasis: {					// 高亮状态下的样式
+                    areaColor: '#039ef2'
+                }
+            }
+        },
+        legend: {
+
+            data: ['在线车场', '离线车场'],
+            orient: 'vertical',
+            x: 'left',
+            padding: 140,
+            itemGap: 20,
+            textStyle: {
+                fontSize: 14,
+
+                fontFamily: "SimHei",
+                color: "#fff"
+
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+
+            formatter: function (params, ticket, callback) {
+                console.log(params);
+                var res = '<div class="e-tooltip"><p class="parking">' + params.data.parking + '</p><p>进出口数量:' + params.data.num + '</br>运维负责人:' + params.data.personName + '</p><p class="right">总车位数:' + params.data.parkingSpace + '</br>联系方式:' + params.data.phone + '</p></div>';
+
+
+                setTimeout(function () {
+// 仅为了模拟异步回调
+                    callback(ticket, res);
+                }, 1);
+                return 'loading';
+            },
+            textStyle: {
+                align: 'left'
+            }
+        },
+
+
+//        roamController: {
+//            show: true,
+//            zlevel: 0,
+//            z: 4,
+//            x: 'left',
+//            y: 'top',
+//            width: 80,
+//            height: 120,
+//            backgroundColor: 'rgba(0,0,0,0)',
+//            borderColor: '#ccc',
+//            borderWidth: 0,
+//            padding: 5,
+//            fillerColor: '#fff',
+//            handleColor: '#6495ed',
+//            step: 15,
+//            mapTypeControl: {
+//                'china': true
+//            }
+//        },
+
+
+        series: [
+            {
+                name: '在线车场', // series名称
+                type: 'scatter', // series图表类型
+                coordinateSystem: 'geo',
+
+                data: [
+
+                    {
+                        name: '海门',
+                        value: [121.15, 31.89, 90],
+                        parking: '停车场1',
+                        num: '801',
+                        parkingSpace: '301',
+                        personName: '张一',
+                        phone: '15654891'
+                    },
+                    {
+                        name: '鄂尔多斯',
+                        value: [109.781327, 39.608266, 120],
+                        parking: '停车场2',
+                        num: '802',
+                        parkingSpace: '302',
+                        personName: '张二',
+                        phone: '15654892'
+                    },
+                    {
+                        name: '招远',
+                        value: [120.38, 37.35, 142],
+                        parking: '停车场3',
+                        num: '803',
+                        parkingSpace: '303',
+                        personName: '张三',
+                        phone: '15654893'
+                    },
+
+
+                ],
+                itemStyle: {
+                    normal: {
+                        color: '#48ea63',
+                        shadowColor: '#3c5c5b',
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 0,
+
+                    }
+                }
+            },
+            {
+                name: '离线车场', // series名称
+                type: 'scatter', // series图表类型
+                coordinateSystem: 'geo',
+                data: [
+                    {
+                        name: '合肥',
+                        value: [117, 27.31, 86],
+                        parking: '停车场4',
+                        num: '804',
+                        parkingSpace: '304',
+                        personName: '张四',
+                        phone: '15654894'
+                    },
+                    {
+                        name: '武汉',
+                        value: [114, 31.30, 52],
+                        parking: '停车场5',
+                        num: '805',
+                        parkingSpace: '305',
+                        personName: '张五',
+                        phone: '15654895'
+                    },
+                    {
+                        name: '舟山',
+                        value: [122.207216, 29.985295, 123],
+                        parking: '停车场6',
+                        num: '806',
+                        parkingSpace: '306',
+                        personName: '张六',
+                        phone: '15654896'
+                    }
+                ],
+                itemStyle: {
+                    normal: {
+                        color: '#dc0643'
+                    }
+                }
+            }
+        ],
+
+    }
+</script>
+</body>
+</html>

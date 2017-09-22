@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bsgrid.all.min.css"/>
+
+
+
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body >
+<div class="content">
+    <img src="images/logo.png" alt="" class="logo">
+    <div id="time"></div>
+    <div class="right_con">
+        <p class="right_p1">各机构车场在线情况</p>
+        <div id="chartmain" style="width:400px; height: 325px;margin: 115px auto 62px"></div>
+        <p class="right_p2">事件监控</p>
+        <table id="searchTable" style="width:23.0729%;margin: 30px auto">
+            <tr>
+                <th w_index="date" width="25%;">车场名</th>
+                <th w_index="name" width="25%;">状态</th>
+                <th w_index="money" w_align="center" width="25%;">上报时间</th>
+
+            </tr>
+        </table>
+
+    </div>
+    <div class="left_con">
+        <p class="left_p1">当前车场在线数</p>
+        <div class="num">
+            <ul>
+                <li>0</li>
+                <li>2</li>
+                <li>0</li>
+                <li>8</li>
+            </ul>
+        </div>
+        <img src="images/biaopan.png" alt="" class="biaopan">
+        <img src="images/pointer.png" alt="" class="pointer">
+        <p class="left_p2">在线率    <span>50</span>%</p>
+        <div class="car">
+            <img src="images/car1.png" alt="" class="car1">
+            <img src="images/car1.png" alt="" class="car3">
+            <img src="images/car2.png" alt="" class="car2">
+        </div>
+        <div class="zongji">
+            <p class="zongji">总计接入车场数量</p>
+            <p class="zongji_num">140</p>
+        </div>
+        <div class="lixian">
+            <p class="lixian">离线车场数量</p>
+            <p class="lixian_num">20</p>
+        </div>
+    </div>
+    <div class="middle_con">
+        <p class="middle_p1">各地车场在线情况</p>
+
+        <div class="middle_anniu">
+
+        </div>
+    </div>
+    <div id="map-wrap" style=" width: 960px;height: 1063px;position: absolute;left:478px;top:171px"></div>
+
+
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/grid.zh-CN.min.js"></script>
+<script type="text/javascript" src="js/bsgrid.all.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript">
+
+
+    var gridObj;
+    $(function () {
+        gridObj = $.fn.bsgrid.init('searchTable', {
+            url: 'data/tsconfig.json',
+            showPageToolbar: false,
+
+            pageSize: 8,
+            pageSizeSelect: false,
+            pagingLittleToolbar: true,
+            pageIncorrectTurnAlert: false,
+            stripeRows: true
+        });
+        $("#searchTable_pt_outTab").remove();
+    });
+
+</script>
+<script type="text/javascript">
+    //指定图标的配置和数据
+    var option = {
+        title : {
+            show:'false',
+            text: '        ',
+            subtext: '',
+
+        },
+        tooltip : {
+            trigger: 'axis',
+
+        },
+        legend: {
+            show:'true',
+            data:['车场总量','在线车场'],
+            x:'right',
+
+            itemGap:40,
+            itemWidth: 10,
+            itemHeight: 10,
+            textStyle:{color:'rgba(255,255,255,0.7)',fontSize:'14px',fontFamily:'AdobeHeitiStd-Regular'},
+        },
+
+        calculable : true,
+        grid: {
+            width:'88%',
+            height:'70%',
+
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['华东区','华北区','华南区','华中区','西南区'],
+                axisLine:{
+                    lineStyle:{
+                        color:'#2a4fc9'
+                    },
+                },
+                axisLabel:{
+                    show:true,
+                    textStyle:{
+                        color:'rgba(255,255,255,0.7)',fontSize:'14px',fontFamily:'AdobeHeitiStd-Regular'
+                    },
+                },
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        color:'#1d3379',
+                        width:'1'
+                    },
+                },
+
+
+            },
+
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                data : ['100','200','300'],
+                axisLine:{
+                    lineStyle:{
+                        color:'#2a4fc9'
+                    },
+                },
+                axisLabel:{
+                    show:true,
+                    textStyle:{
+                        color:'rgba(255,255,255,0.7)',fontSize:'14px',fontFamily:'AdobeHeitiStd-Regular'
+                    },
+                },
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        color:'#1d3379',
+                        width:'1'
+                    },
+                },
+
+
+            },
+        ],
+        series : [
+            {
+                name:'车场总量',
+                type:'bar',
+                data:[150, 220, 290, 110, 80],
+                barWidth:'16px',
+                itemStyle:{
+                    normal:{color:'#955ff2',barWidth:'16px'}
+                },
+
+            },
+            {
+                name:'在线车场',
+                type:'bar',
+                data:[130, 190, 250, 90, 70],
+                barWidth:'16px',
+                itemStyle:{
+                    normal:{color:'#5f88f2',barWidth:'16px'}
+                },
+
+            }
+        ]
+    };
+
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chartmain'));
+
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart2 = echarts.init(document.getElementById('map-wrap'));
+
+
+
+    var option={
+        geo:{
+            map:'china',
+            roam:true,
+            itemStyle:{
+                normal:{
+                    areaColor: '#103260',
+                    borderColor: '#039ef2'
+                },
+                emphasis: {					// 高亮状态下的样式
+                    areaColor: '#039ef2'
+                }
+            }
+        },
+        legend:{
+
+            data:['在线车场','离线车场'],
+            orient: 'vertical',
+            x:'left',
+            padding:140,
+            itemGap:20,
+            textStyle:{
+                fontSize:14,
+
+                fontFamily:"SimHei",
+                color:"#fff"
+
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+
+            formatter: function (params,ticket,callback) {
+                console.log(params);
+                var res = '<div class="e-tooltip"><p class="parking">'+params.data.parking+'</p><p>进出口数量:'+params.data.num+'</br>运维负责人:'+params.data.personName+'</p><p class="right">总车位数:'+params.data.parkingSpace+'</br>联系方式:'+params.data.phone+'</p></div>';
+
+
+                setTimeout(function (){
+                    // 仅为了模拟异步回调
+                    callback(ticket, res);
+                }, 1);
+                return 'loading';
+            },
+            textStyle:{
+                align:'left'
+            }
+        },
+
+
+//        roamController: {
+//            show: true,
+//            zlevel: 0,
+//            z: 4,
+//            x: 'left',
+//            y: 'top',
+//            width: 80,
+//            height: 120,
+//            backgroundColor: 'rgba(0,0,0,0)',
+//            borderColor: '#ccc',
+//            borderWidth: 0,
+//            padding: 5,
+//            fillerColor: '#fff',
+//            handleColor: '#6495ed',
+//            step: 15,
+//            mapTypeControl: {
+//                'china': true
+//            }
+//        },
+
+
+        series: [
+            {
+                name: '在线车场', // series名称
+                type: 'scatter', // series图表类型
+                coordinateSystem: 'geo',
+                roam:true,
+                data:[
+
+                    {name: '海门', value: [121.15, 31.89, 90],parking:'停车场1',num:'801',parkingSpace:'301',personName:'张一',phone:'15654891'},
+                    {name: '鄂尔多斯', value: [109.781327, 39.608266, 120],parking:'停车场2',num:'802',parkingSpace:'302',personName:'张二',phone:'15654892'},
+                    {name: '招远', value: [120.38, 37.35, 142],parking:'停车场3',num:'803',parkingSpace:'303',personName:'张三',phone:'15654893'},
+
+
+                ],
+                itemStyle:{
+                    normal:{
+                        color:'#48ea63',
+                        shadowColor:'#3c5c5b',
+                        shadowBlur:10,
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 0,
+
+                    }
+                }
+            },
+            {
+                name: '离线车场', // series名称
+                type: 'scatter', // series图表类型
+                coordinateSystem: 'geo',
+                data:[
+                    {name: '合肥', value: [117,27.31,86],parking:'停车场4',num:'804',parkingSpace:'304',personName:'张四',phone:'15654894'},
+                    {name: '武汉', value: [114,31.30,52],parking:'停车场5',num:'805',parkingSpace:'305',personName:'张五',phone:'15654895'},
+                    {name: '舟山', value: [122.207216, 29.985295, 123],parking:'停车场6',num:'806',parkingSpace:'306',personName:'张六',phone:'15654896'}
+                ],
+                itemStyle:{
+                    normal:{
+                        color:'#dc0643'
+                    }
+                }
+            }
+        ],
+
+    }
+
+    //使用制定的配置项和数据显示图表
+    myChart2.setOption(option);
+</script>
+</html>

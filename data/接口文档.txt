@@ -1,0 +1,9 @@
+tsconfig1.json文件: data代表车场名,name代表状态,money代表时间
+
+tsconfig2.json文件: num1代表当前车场在线数,num代表在线率,num3代表总计接入车场数量,num4代表离线车场数量
+
+tsconfig3.json文件: 第一个data代表华东,华北,华南,华中,西南的车场总量;第二个data代表华东,华北,华南,华中,西南的在线车场;
+
+tsconfig4.json文件: 在线车场的数据:name地名,value地理位置,parking停车场名字,num进出口数量,parkingSpace总车位数,personName运维负责人,phone联系方式
+
+tsconfig5.json文件: 离线车场的数据:name地名,value地理位置,parking停车场名字,num进出口数量,parkingSpace总车位数,personName运维负责人,phone联系方式

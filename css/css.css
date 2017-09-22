@@ -205,6 +205,16 @@ p.left_p2 span {
     text-align: center;
     line-height: 91px;
 }
+.left_con .num p{
+    font-family: "Impact";
+    font-size: 72px;
+    color: #1f1f1f;
+    text-align: center;
+    line-height: 91px;
+    position: absolute;
+    letter-spacing: 53px;
+    left: 85px;
+}
 
 img.biaopan {
     width: 400px;
@@ -303,7 +313,7 @@ p.lixian_num {
 
     position: absolute;
     top: 108px;
-    right: 36px;
+    right: 40px;
     text-align: center;
 }
 

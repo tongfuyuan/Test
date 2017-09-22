@@ -1,0 +1,14 @@
+{"success": true, "data": [
+  {
+    "name": "海门","value": [121.15, 31.89, 90],"parking": "停车场1","num": "801","parkingSpace":"301","personName":"张一","phone":"15654891"
+  },
+  {
+    "name": "鄂尔多斯","value": [109.781327, 39.608266, 120],"parking": "停车场2","num": "801","parkingSpace":"301","personName":"张一","phone":"15654891"
+  },
+  {
+    "name": "招远","value": [120.38, 37.35, 142],"parking": "停车场1","num": "801","parkingSpace":"301","personName":"张一","phone":"15654891"
+  }
+
+]}
+
+
