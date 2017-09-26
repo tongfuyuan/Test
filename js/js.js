@@ -1,3 +1,4 @@
+
 function f1() {
     $(document).ready(function () {
         function Format(now,mask)
@@ -138,7 +139,7 @@ function f2(){
 }
 t2 = setInterval(f2, 1000);
 
-$(document).ready(function () {
+t3 = setInterval($(document).ready(function () {
     require.config({
         paths: {
             echarts: 'http://echarts.baidu.com/build/dist'
@@ -221,9 +222,17 @@ $(document).ready(function () {
                                     }, 1);
                                     return 'loading';
                                 },
+                                backgroundColor:'rgba(11,87,202,0.7)',
+                                borderColor:'#71fffe',
+                                borderWidth:1,
+                                boxShadow:'0 0 10 #71fffe',
+                                padding:5,
+
+
                                 textStyle: {
                                     align: 'left'
                                 }
+
                             },
                             itemStyle: {
                                 normal: {
@@ -461,6 +470,8 @@ $(document).ready(function () {
                                     }, 1);
                                     return 'loading';
                                 },
+                                backgroundColor:'rgba(11,87,202,0.7)',
+
                                 textStyle: {
                                     align: 'left'
                                 }
@@ -508,9 +519,8 @@ $(document).ready(function () {
 
         }
     )
-})
-
-$(document).ready(function(){
+}), 100000);
+t4 = setInterval($(document).ready(function(){
     //指定图标的配置和数据
     require.config({
         paths: {
@@ -654,8 +664,8 @@ $(document).ready(function(){
     );
 
 
-})
-$(document).ready(function () {
+}), 100000);
+t5 = setInterval($(document).ready(function () {
     var gridObj;
     $(function () {
         gridObj = $.fn.bsgrid.init('searchTable', {
@@ -670,5 +680,7 @@ $(document).ready(function () {
         });
         $("#searchTable_pt_outTab").remove();
     });
-})
+}), 1000);
+
+
 

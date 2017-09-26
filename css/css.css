@@ -374,3 +374,7 @@ img.logo {
 .bsgrid tr.selected.selected_color td {
     background-color: rgba(0,0,0,0)!important;
 }
+.e-tooltip p.right{
+    margin-top: -48px;
+    margin-left: 140px;
+}
