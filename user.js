@@ -5,7 +5,7 @@
  *
  */
 
-// ceshi git
+// ceshi
 var urlArgsObj = getUrl();  // url中的参数集合;
 var CARPARKID = urlArgsObj.parkId;       //  车场ID;
 var CARPARKNAME = decodeURIComponent(urlArgsObj.parkName);
