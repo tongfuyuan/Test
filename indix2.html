@@ -18,7 +18,7 @@
 <div class="content">
 
     <div id="map-wrap" style="height: 500px;"></div>
-
+<p style="width: 100px;height: 100px;background-color: #ff0" id="p">nfgnfdb</p>
 
 
 </div>
@@ -29,7 +29,24 @@
 <script type="text/javascript" src="js/grid.zh-CN.min.js"></script>
 <script type="text/javascript" src="js/bsgrid.all.min.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
+<script>
+//    (function( ) {
+//        console.log(1)
+//    }())
+//!function () {
+//    console.log('watch out!');
+//} ();
+    $("p").click(function () {
+        console.log(34)
+    })
+$("p").mouseover(function () {
+    console.log(34)
+})
+//    document.getElementById("p").addEventListener("click",function () {
+//        console.log(34)
+//    },false)
 
+</script>
 <script type="text/javascript">
     var myChart2 = echarts.init(document.getElementById('map-wrap'));
     var myData = [
