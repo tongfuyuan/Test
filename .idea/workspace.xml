@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d36ec20-b513-418e-8a1c-df58bb809744" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/js2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indix2.html" afterPath="$PROJECT_DIR$/indix2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indix5.html" afterPath="$PROJECT_DIR$/indix5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/license.txt" afterPath="$PROJECT_DIR$/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user.js" afterPath="$PROJECT_DIR$/user.js" />
-    </list>
+    <list default="true" id="7d36ec20-b513-418e-8a1c-df58bb809744" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -39,27 +32,6 @@
                 <state relative-caret-position="150">
                   <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="newParkSurvey.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../../修改后/newParkSurvey.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34680">
-                  <caret line="1430" column="21" lean-forward="false" selection-start-line="1430" selection-start-column="14" selection-end-line="1430" selection-end-column="21" />
-                  <folding>
-                    <element signature="n#!!block;n#TimeDeletePoint#0" expanded="false" />
-                    <element signature="n#!!block;n#TimeDelete#0" expanded="false" />
-                    <element signature="n#!!block;n#getHour#0" expanded="false" />
-                    <element signature="n#!!block;n#getDate#0" expanded="false" />
-                    <element signature="e#22358#22769#0" expanded="false" />
-                    <element signature="e#23365#24692#0" expanded="false" />
-                    <element signature="e#24848#25486#0" expanded="false" />
-                    <element signature="e#25504#27761#0" expanded="false" />
-                    <element signature="e#27942#28580#0" expanded="false" />
-                    <element signature="e#28594#30827#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -142,8 +114,8 @@
           <file leaf-file-name="BI(5).js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../../修改后/BI(5).js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="1046" column="28" lean-forward="false" selection-start-line="1046" selection-start-column="17" selection-end-line="1046" selection-end-column="28" />
+                <state relative-caret-position="30">
+                  <caret line="656" column="57" lean-forward="true" selection-start-line="1046" selection-start-column="17" selection-end-line="1046" selection-end-column="28" />
                   <folding>
                     <element signature="e#2213#2624#0" expanded="false" />
                     <element signature="e#2652#3197#0" expanded="false" />
@@ -212,8 +184,8 @@
           <file leaf-file-name="lineChart.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../../修改后/lineChart.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="63" column="65" lean-forward="true" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+                <state relative-caret-position="420">
+                  <caret line="63" column="65" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -416,12 +388,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>appKey</find>
-      <find>carType</find>
-      <find>exportFn()</find>
-      <find>tableHeaderUrl</find>
-      <find>setEchartsParkFlowratePackedImg</find>
-      <find>timeBtn</find>
       <find>showTime2()</find>
       <find>payUrlpayUrl</find>
       <find>payUrl</find>
@@ -438,14 +404,20 @@
       <find>getEchartsParkFlowPacked4</find>
       <find>result</find>
       <find>getEchartsParkFlowratePacked2</find>
-      <find>electronic2</find>
       <find>obj</find>
       <find>reportList</find>
-      <find>companyUrl</find>
-      <find>echartHeaderUrl</find>
-      <find>reportDataUrl</find>
       <find>getData</find>
+      <find>echartHeaderUrl</find>
       <find>getEchartHead</find>
+      <find>creatTable</find>
+      <find>/PortalBilling/Billingcontroller/CountReportData.do</find>
+      <find>companyUrl</find>
+      <find>tableHeaderUrl</find>
+      <find>creatTableHeader</find>
+      <find>reportDataUrl</find>
+      <find>dataObj</find>
+      <find>countReportDataUrl</find>
+      <find>electronic2</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -505,6 +477,9 @@
         <option value="$PROJECT_DIR$/../../修改后/BI.js" />
         <option value="$PROJECT_DIR$/../../修改后/lineChart.js" />
         <option value="$PROJECT_DIR$/../../修改后/BI(5).js" />
+        <option value="$PROJECT_DIR$/../../修改后/barChart.js" />
+        <option value="$PROJECT_DIR$/../../修改后/dataTable.js" />
+        <option value="$PROJECT_DIR$/../../修改后/dataTable1.js" />
       </list>
     </option>
   </component>
@@ -597,12 +572,12 @@
       <workItem from="1507510919265" duration="39404000" />
       <workItem from="1507616911328" duration="14190000" />
       <workItem from="1507683733834" duration="34097000" />
-      <workItem from="1507770033309" duration="5134000" />
+      <workItem from="1507770033309" duration="7356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183071000" />
+    <option name="totallyTimeSpent" value="185293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -691,21 +666,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../deviceManage.js" />
-    <entry file="file://$PROJECT_DIR$/../../修改后/operation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../修改后/longRule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../修改后/longRule.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -949,8 +909,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../修改后/newParkSurvey.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34680">
-          <caret line="1430" column="21" lean-forward="false" selection-start-line="1430" selection-start-column="14" selection-end-line="1430" selection-end-column="21" />
+        <state relative-caret-position="3780">
+          <caret line="165" column="21" lean-forward="true" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
           <folding>
             <element signature="n#!!block;n#TimeDeletePoint#0" expanded="false" />
             <element signature="n#!!block;n#TimeDelete#0" expanded="false" />
@@ -1085,10 +1045,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../修改后/BI(5).js">
+    <entry file="file://$PROJECT_DIR$/../../修改后/barChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="169" column="135" lean-forward="false" selection-start-line="169" selection-start-column="135" selection-end-line="169" selection-end-column="135" />
+          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../修改后/dataTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="18" column="75" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../修改后/dataTable1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="1046" column="28" lean-forward="false" selection-start-line="1046" selection-start-column="17" selection-end-line="1046" selection-end-column="28" />
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../修改后/BI(5).js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="656" column="57" lean-forward="true" selection-start-line="1046" selection-start-column="17" selection-end-line="1046" selection-end-column="28" />
           <folding>
             <element signature="e#2213#2624#0" expanded="false" />
             <element signature="e#2652#3197#0" expanded="false" />
@@ -1155,8 +1140,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../修改后/lineChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="63" column="65" lean-forward="true" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+        <state relative-caret-position="420">
+          <caret line="63" column="65" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
           <folding />
         </state>
       </provider>
