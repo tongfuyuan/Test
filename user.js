@@ -35,8 +35,8 @@ $(document).ready(function(){
 
     getForm({"formId":"longuserForm"},"detailPopupForm","Detail");     //  创建新增、修改form表单;
     getPopupCompany();                                                 //  获取弹窗内的分公司下拉框;
-    var _companyCode = $("#companyCodeDetail").val();
-    getPopupPark(_companyCode);                                        //  获取弹窗内的分公司下拉框;
+    var _companyName = $("#companyNameDetail").val();
+    getPopupPark(_companyName);                                        //  获取弹窗内的分公司下拉框;
     var _parkId = $("#parkIdDetail").val();
     getPopupRules(_parkId);                                            //  获取弹窗内的分公司下拉框;
     detailPopupEvent();                                                //  新增、弹窗内的操作事件;
@@ -465,7 +465,7 @@ function removeDisabledLookDetail(){                //  新增、修改时，让
     $(".addPlateNoBtn").show();
     $("#licensePlateNumberDetail input").removeAttr("disabled");
     $("#licensePlateNumberDetail .plateNoDeleteBtn").show();
-    $("#companyCodeDetail").attr("disabled","disabled");
+    $("#companyNameDetail").attr("disabled","disabled");
     $("#parkIdDetail").attr("disabled","disabled");
     $(".popupFormListDetail .chargeRuleIdForm select").attr("disabled","disabled");
     $("#chargeRuleIdDetail").removeAttr("disabled");
@@ -519,8 +519,8 @@ function changeRuleType(_parkId){      //  根据车场ID获取规则类型及�
     console.log(_parkId);
     var _ruleTypeObj = getRuleType(_parkId);       //  获取规则类型;
     console.log(_ruleTypeObj);
-    $("#companyCodeDetail").val(_ruleTypeObj.companyCode);
-    getPopupPark(_ruleTypeObj.companyCode)
+    $("#companyNameDetail").val(_ruleTypeObj.companyName);
+    getPopupPark(_ruleTypeObj.companyName)
     $("#parkIdDetail").val(_ruleTypeObj.serialNo);
 
     var _ruleType = _ruleTypeObj.parkType;    //  1--线下；2--云停车；3--路侧停车
@@ -608,14 +608,14 @@ function renewFn(rowIndex){
 }
 
 function updateAddDisabled(){    //  修改信息时，分公司、车场、规则、用户属性不可修改;
-    $("#companyCodeDetail").attr("disabled","disabled");
+    $("#companyNameDetail").attr("disabled","disabled");
     $("#parkIdDetail").attr("disabled","disabled");
     $(".popupFormListDetail .chargeRuleIdForm select").attr("disabled","disabled");
     $("#userPropertiyDetail").attr("disabled","disabled");
 }
 
 function addRemoveDisabled(){   //  新增长期用户信息时，移除分公司、车场、规则、用户属性不可修改的属性；
-    $("#companyCodeDetail").removeAttr("disabled","disabled");
+    $("#companyNameDetail").removeAttr("disabled","disabled");
     $("#parkIdDetail").removeAttr("disabled","disabled");
     $(".popupFormListDetail .chargeRuleIdForm select").removeAttr("disabled","disabled");
     $("#userPropertiyDetail").removeAttr("disabled","disabled");
@@ -684,17 +684,17 @@ function getPopupCompany(){   // 获取弹窗内分公司
             $.each(_arr,function(i,value){
                 _options += "<option data-name='companyName' value='"+value.companyId+"'>"+value.companyName+"</option>";
             });
-            $("#companyCodeDetail").html(_options);
+            $("#companyNameDetail").html(_options);
         }
     });
 }
 
-function getPopupPark(_companyCode){    //  创建弹窗内车场下拉框；
+function getPopupPark(_companyName){    //  创建弹窗内车场下拉框；
     $.ajax({
         url : interfaceObj.parkUrl,
         type : 'post',
         async : false,
-        data : {"companyId": _companyCode},
+        data : {"companyId": _companyName},
         dataType : 'json',
         success : function(data){
             var _arr = data.resultObj;
@@ -749,9 +749,9 @@ function detailPopupEvent(){      //  新增、修改弹窗的事件操作;
     hidePopup($(".detailPopupClose,.detailPopupCancelBtn"),$(".detailPopup"));   //  新增、修改关闭弹窗
     tabChange($(".popupFormTabDetail li"),$(".popupFormListDetail"));  //  新增、修改表单选项卡切换;
 
-    $("#companyCodeDetail").on("change",function(){    //  分公司变化时，停车变化;
-        var _companyCode = $("#companyCodeDetail").val();
-        getPopupPark(_companyCode);
+    $("#companyNameDetail").on("change",function(){    //  分公司变化时，停车变化;
+        var _companyName = $("#companyNameDetail").val();
+        getPopupPark(_companyName);
         var _parkId = $("#parkIdDetail").val();
         // getPopupRules(_parkId);
         changeRuleType(_parkId);
@@ -826,7 +826,7 @@ function emptyDetailPopup(){   //  置空新增、修改弹窗
 }
 
 function setDetailValue(_obj){   //  弹框赋值;
-                                 // getPopupPark(_obj["companyCode"]);
+                                 // getPopupPark(_obj["companyName"]);
     changeRuleType(_obj["parkId"]);
     // getPopupRules(_obj["parkId"]);
     $(".popupFormListDetail input,.popupFormListDetail select,.popupFormListDetail textarea").each(function(i){
