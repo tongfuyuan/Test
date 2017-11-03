@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bsgrid.all.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript" src="js/china.js"></script>
+    <script type="text/javascript" src="js/grid.zh-CN.min.js"></script>
+    <script type="text/javascript" src="js/bsgrid.all.min.js"></script>
+    <script src="underscore.js"></script>
+    <style>
+        .permissionsInfo {
+            margin-left: 1.3%;
+            width: 97%;
+            min-height: 327px;
+            margin-top: 20px;
+            background: #fff;
+        }
+        .permissionsInfo2 {
+            width: 90%;
+            height: auto;
+            /* min-height: 327px; */
+            margin-left: 5%;
+            /* background: #f0f; */
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+        .permissionsInfoHead {
+            width: 98%;
+            height: 50px;
+            /* background: #f0f; */
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 27px;
+        }
+        .permissionsInfoMain {
+            width: 91%;
+            height: auto;
+            min-height: 150px;
+            /* background: #ff0; */
+            margin-left: 4%;
+            margin-top: 10px;
+        }
+        .permissions {
+            width: 80%;
+            /* background: #00f; */
+            border: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            zoom:1;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        .type {
+            margin-left: 20px;
+            margin-top: 15px;
+            float: left;
+        }
+        .typeSpan {
+            font-size: 15px;
+        }
+        .operationType {
+            width: 199px;
+            height: 26px;
+            margin-left: 30px;
+        }
+        .number {
+            float: left;
+            margin-top: 15px;
+            margin-left: 100px;
+        }
+        .numberInput {
+            width: 120px;
+            height: 20px;
+            margin-left: 30px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        .urlDiv {
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .urlSpan {
+            font-size: 15px;
+        }
+        .urlInput {
+            width: 609px;
+            height: 20px;
+            margin-left: 30px;
+        }
+        .addPermissions {
+            width: 100%;
+            height: 36px;
+            border-top: 1px solid #000;
+        }
+        .addPermissionsDiv {
+            text-align: center;
+            line-height: 36px;
+            font-size: 18px;
+        }
+        .addPermissionsDiv2 {
+            width: 100px;
+            line-height: 36px;
+            margin-left: 50%;
+        }
+        .addPermissionSpan {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .save {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            float: right;
+            margin-right: 150px;
+            margin-top: 20px;
+            display: none;
+        }
+        .close {
+            width: 20px;
+            float: right;
+            margin-top: -40px;
+            /* margin-left: 106px; */
+        }
+        .add {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .compile {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .del {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .new{
+            float: left;
+            margin-left: 20px;
+        }
+    </style>
+    <script type="text/template" id="tplLi">
+        <% _.each(arr, function(i,index){ %>
+        <div class="permissions" data-index="<%= index %>">
+
+            <% if( i.type =="button"){ %>
+            <div class="type"><span class="typeSpan">类型</span><select class="operationType"><option value="">请选择</option><option value="query">数据查询</option><option value="button" selected="selected">按钮</option><option value="link">链接</option></select></div>
+            <% var classNum=i.className.split(",");
+             var noclassNum=i.noclassName.split(",");
+             var contentNum=i.content.split(",");
+             var nocontentNum=i.nocontent.split(",");
+            for(var n=0;n<classNum.length;n++){ %>
+            <div class="new"><input type="button" class="<%= classNum[n] %>" value="<%= contentNum[n] %>" style="background-color:#5bb1da;border:1px #5bb1da solid"></div>
+            <% };for(var n=0;n<noclassNum.length;n++){ %>
+            <div class="new"><input type="button" class="<%= noclassNum[n] %>" value="<%= nocontentNum[n] %>" style="background-color:#bfc3c5;border:1px #bfc3c5 solid"></div>
+            <% }
+            %>
+            <% }else if( i.type =="input"){%>
+            <div class="type"><span class="typeSpan">类型</span><select class="operationType"><option value="">请选择</option><option value="query">数据查询</option><option value="button">按钮</option><option value="link" selected="selected">链接</option></select></div>
+            <% var classNum=i.className.split(",");
+            var noclassNum=i.noclassName.split(",");
+            var contentNum=i.content.split(",");
+            var nocontentNum=i.nocontent.split(",");
+            for(var n=0;n<classNum.length;n++){ %>
+            <div class="new"><%= contentNum[n] %><input type="text" class="<%= classNum[n] %>" value="" ></div>
+            <% };for(var n=0;n<noclassNum.length;n++){ %>
+            <div class="new"><%= nocontentNum[n] %><input type="text" class="<%= noclassNum[n] %>" value="" disabled="disabled"></div>
+            <% }
+            %>
+            <% }%>
+            <div class="number"><span class="frameWorkName">名称</span><input type="text" class="frameName" value="<%= i.frameName %>"></div>
+            <div class="urlDiv"><span class="urlSpan">接口地址</span><input type="text" class="urlInput" value="<%= i.urlInput %>"></div>
+            <img class="close" src="../images/close.png"><div class="new"></div>
+
+         </div>
+        <% }); %>
+
+    </script>
+</head>
+<body>
+<div class="permissionsInfo">
+    <div class="permissionsInfo2">
+        <div class="permissionsInfoHead"><span>页面权限</span></div>
+        <div class="permissionsInfoMain">
+
+        <div class="addPermissions">
+            <div class="addPermissionsDiv">
+                <div class="addPermissionsDiv2">
+                    <span class="addPermissionSpan">+</span><a href="javascript:void(0);">新增</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="save" style="display: block;">保存</button>
+</body>
+<script>
+    var arr=new Object;
+    var row=0;
+    $(document).ready(function () {
+        createTpye();  //类型出现
+
+        render(arr,$('.permissionsInfoMain'));// 初始化
+        modify.model();//修改事件
+
+    });
+    function createTpye() {
+        $.ajax({
+            url:"data/newMenu.json",
+            type:"post",
+            async:false,
+            dataType:"json",
+            success:function (data) {
+                arr=data.resultObj;
+//                console.log(arr)
+            }
+        });
+    }
+
+    function  render(arr,target) {
+        target.prepend(_.template($('#tplLi').html(), arr));
+    }
+
+var modify = {
+        model :function () {
+            //        typechange();  //点击类型出现
+//        add();          //新增
+            clickEvent();   //点击事件
+//        save();     //保存
+            clickButton();
+        }
+}
+    function typechange() {
+        console.log(data2);
+        var l=$(".permissions").length;
+        console.log(l);
+//        for(var row=0;row<l;row++){
+//            $(".operationType").eq(row).on("change",function () {
+//                var o=$(".operationType").eq(row).val();
+//                if(o=="button"){
+//                    var arr=data2.button;
+//                    console.log(arr);
+//                    var buttonList="<div>";
+//                    $.each(arr,function (i,v){
+//                        buttonList+="<input type='button' class='"+v.type+"' value='"+v.content+"'>"
+//                    });
+//                    $(".new").eq(row).append(buttonList+"</div>");
+//                    clickButton();
+//                }
+//            });
+//        }
+
+    }
+    //点击按钮
+    function clickButton() {
+        $(".new input[type='button']").on("click",function () {
+            switch($(this).css("background-color")){
+                case "rgb(191, 195, 197)":
+                    $(this).css({"background-color":"#5bb1da","border":"1px #5bb1da solid"})
+                    break;
+                case "rgb(91, 177, 218)":
+                    $(this).css({"background-color":"#bfc3c5","border":"1px #bfc3c5 solid"})
+                    break;
+            }
+        });
+        $(".new input[type='text']").on("click",function () {
+            if($(this).attr("disabled")){
+console.log(1);
+//                    $(this).removeAttr("disabled","disabled")
+//                $(this).attr("disabled", "disabled")
+            }
+               else
+                {
+
+//                    $(this).removeAttr("disabled","disabled")
+//                    $(this).attr("disabled", "disabled")
+                console.log(2)
+                }
+            console.log($(this).attr("disabled"));
+        })
+    }
+
+    function add() {
+        $(".addPermissionsDiv2").click(function(){
+            var html="<div class='permissions'><div class='type'><span class='typeSpan'>类型</span><select class ='operationType'><option value=''>请选择</option><option value='query'>数据查询</option><option value='button'>按钮</option><option value='link'>链接</option></select></div><div class='number'><span class='frameWorkName'>名称</span><input type='text' class='frameName'></div><div class='urlDiv'><span class = 'urlSpan'>接口地址</span><input type='text' class='urlInput' id='url2'></div><img class='close' src='../images/close.png'><div class='new'></div></div>"
+            $(".permissionsInfoMain").append(html);
+//            $(".numberInput").keyup(function(){
+//                var tmptxt=$(this).val();
+//                $(this).val(tmptxt.replace(/\D/g,''));
+//            })
+//            typechange(data);
+            clickEvent();
+            typechange();
+        });
+    }
+
+    function clickEvent() {
+        $(".close").click(function () {
+            $(this).parent().remove();
+        });
+
+    }
+    function save() {
+        $(".save").click(function () {
+            var l=$(".permissions").length;
+            var da_obj=[];
+            for(var i=0;i<l;i++){
+                $(".permissions").eq(i).find(":button").css("background-color","#5bb1da").each(function () {
+                    var v=$(this).val();
+                    var c=$(this).attr("class");
+                    console.log(v);
+                    da_obj.push(c,v);
+                })
+            };
+            console.log(da_obj);
+            $.ajax({
+                url:"data/newMenu2.json",
+                type:"post",
+                async:false,
+                data:JSON.stringify(da_obj),
+                dataType:"json",
+                success:function (data) {
+                    data3=data;
+                    console.log(data3);
+
+                }
+            })
+        })
+    }
+
+
+
+
+</script>
+</html>

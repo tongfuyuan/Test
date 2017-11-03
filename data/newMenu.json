@@ -1,0 +1,6 @@
+{"resultObj":[
+  {"type":"button","className":"add,compile","content":"新增,编辑","noclassName":"del","nocontent":"删除", "frameName":"1","urlInput":"11"
+  },
+  {"type":"input","className":"name,company","content":"名称,公司","noclassName":"parkName","nocontent":"车场名称", "frameName":"2","urlInput":"22"
+  }
+],"message": {"errorCode": "200", "errorDsc": "success!"}}

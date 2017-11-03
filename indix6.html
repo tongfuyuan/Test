@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bsgrid.all.min.css"/>
+
+
+
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body >
+<div class="content">
+    <img src="images/logo.png" alt="" class="logo">
+    <div id="time"></div>
+    <div class="right_con">
+        <p class="right_p1">各机构车场在线情况</p>
+        <div id="chartmain" style="width:400px; height: 325px;margin: 115px auto 62px"></div>
+        <p class="right_p2">事件监控</p>
+        <table id="searchTable" style="width:23.0729%;margin: 30px auto">
+            <tr>
+                <th w_index="date" width="25%;">车场名</th>
+                <th w_index="name" width="25%;">状态</th>
+                <th w_index="money" w_align="center" width="25%;">上报时间</th>
+
+            </tr>
+        </table>
+
+    </div>
+    <div class="left_con">
+        <p class="left_p1">当前车场在线数</p>
+        <div class="num">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p>0208</p>
+        </div>
+        <img src="images/biaopan.png" alt="" class="biaopan">
+        <img src="images/pointer.png" alt="" class="pointer">
+        <p class="left_p2">在线率    <span>50</span>%</p>
+        <div class="car">
+            <img src="images/car1.png" alt="" class="car1">
+            <img src="images/car1.png" alt="" class="car3">
+            <img src="images/car2.png" alt="" class="car2">
+        </div>
+        <div class="zongji">
+            <p class="zongji">总计接入车场数量</p>
+            <p class="zongji_num">140</p>
+        </div>
+        <div class="lixian">
+            <p class="lixian">离线车场数量</p>
+            <p class="lixian_num">20</p>
+        </div>
+    </div>
+    <div class="middle_con">
+        <p class="middle_p1">各地车场在线情况</p>
+
+        <div class="middle_anniu">
+
+        </div>
+    </div>
+    <div id="map-wrap" style=" width: 775px;height: 768px;position: absolute;left:568px;top:257px"></div>
+
+
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/grid.zh-CN.min.js"></script>
+<script type="text/javascript" src="js/bsgrid.all.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script>
+    $(document).ajaxStart(onStart);
+
+    $(document) .ajaxComplete(onComplete);
+
+    $(document).ajaxSuccess(onSuccess);
+
+    function onStart(event) {
+
+        //.....
+alert(1);
+          }
+
+    function onComplete(event, xhr, settings) {
+
+        //.....
+
+    }
+
+     function onSuccess(event, xhr, settings) {
+
+         //.....
+
+             }
+</script>
+
+
+</html>

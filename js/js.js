@@ -676,11 +676,25 @@ t5 = setInterval($(document).ready(function () {
             pageSizeSelect: false,
             pagingLittleToolbar: true,
             pageIncorrectTurnAlert: false,
-            stripeRows: true
+            stripeRows: true,
+            additionalAfterRenderGrid:function(){
+                gridObj.refreshPage();
+            }
         });
         $("#searchTable_pt_outTab").remove();
     });
-}), 1000);
+}), 10000);
+var gridObj;
+function refreshTotalPages(){    //  获取当前页数，数据总条数
+
+    var _pages = gridObj.getTotalPages();
+    var _totalRows = gridObj.getTotalRows();
+    if(_pages == "0"){
+        _pages = "1"
+    };
+    $("#totalPages").html(_pages);
+    $(".totalDatas").html(_totalRows);
+}
 
 
 

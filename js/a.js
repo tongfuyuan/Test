@@ -1,7 +1,3 @@
-$("document").ready(function () {
-    f1 : function () {
-
-        alert(1);
-    }
-    f1();
-});
+var str = '123,125,236,123';
+var reg = /^(\d+,?)+$/;
+alert(reg.test(str));
