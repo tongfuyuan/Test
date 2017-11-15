@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bsgrid.all.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript" src="js/china.js"></script>
+    <script type="text/javascript" src="js/grid.zh-CN.min.js"></script>
+    <script type="text/javascript" src="js/bsgrid.all.min.js"></script>
+    <script src="../js/underscore.js"></script>
+    <script src="js/newMenu3.js"></script>
+    <style>
+        .permissionsInfo {
+            margin-left: 1.3%;
+            width: 97%;
+            min-height: 327px;
+            margin-top: 20px;
+            background: #fff;
+        }
+        .permissionsInfo2 {
+            width: 90%;
+            height: auto;
+            /* min-height: 327px; */
+            margin-left: 5%;
+            /* background: #f0f; */
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+        .permissionsInfoHead {
+            width: 98%;
+            height: 50px;
+            /* background: #f0f; */
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 27px;
+        }
+        .permissionsInfoMain {
+            width: 91%;
+            height: auto;
+            min-height: 150px;
+            /* background: #ff0; */
+            margin-left: 4%;
+            margin-top: 10px;
+        }
+        .permissions {
+            width: 80%;
+            /* background: #00f; */
+            border: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            zoom:1;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        .type {
+            margin-left: 20px;
+            margin-top: 15px;
+            float: left;
+        }
+        .typeSpan {
+            font-size: 15px;
+        }
+        .operationType {
+            width: 199px;
+            height: 26px;
+            margin-left: 30px;
+        }
+        .number {
+            float: left;
+            margin-top: 15px;
+            margin-left: 100px;
+        }
+        .numberInput {
+            width: 120px;
+            height: 20px;
+            margin-left: 30px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        .urlDiv {
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .urlSpan {
+            font-size: 15px;
+        }
+        .urlInput {
+            width: 609px;
+            height: 20px;
+            margin-left: 30px;
+        }
+        .addPermissions {
+            width: 100%;
+            height: 36px;
+            border-top: 1px solid #000;
+        }
+        .addPermissionsDiv {
+            text-align: center;
+            line-height: 36px;
+            font-size: 18px;
+        }
+        .addPermissionsDiv2 {
+            width: 100px;
+            line-height: 36px;
+            margin-left: 50%;
+        }
+        .addPermissionSpan {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /*.save {*/
+            /*width: 80px;*/
+            /*height: 34px;*/
+            /*border: 1px #5bb1da solid;*/
+            /*background-color: #5bb1da;*/
+            /*color: #ffffff;*/
+            /*cursor: pointer;*/
+            /*float: right;*/
+            /*margin-right: 150px;*/
+            /*margin-top: 20px;*/
+            /*display: none;*/
+        /*}*/
+        .close {
+            width: 20px;
+            float: right;
+            margin-top: -40px;
+            /* margin-left: 106px; */
+        }
+        .add {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .compile {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .del {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .addBtn {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .printBtn {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .exportBtn {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .save {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+        .updata {
+            width: 80px;
+            height: 34px;
+            border: 1px #5bb1da solid;
+            background-color: #5bb1da;
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 7px;
+        }
+
+        .new{
+            float: left;
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <input type="button" value="新增" class="add">
+    <input type="button" value="新增" class="addBtn">
+    <input type="button" value="编辑" class="compile">
+    <input type="button" value="删除" class="del">
+    <input type="button" value="打印" class="printBtn">
+    <input type="button" value="导出" class="exportBtn">
+    <input type="button" value="保存" class="save">
+    <input type="button" value="保存" class="updata">
+    <input type="button" value="查询" class="searchBtn">
+    <input type="button" value="一键同步数据" class="syncDataBtn">
+    <input type="button" value="保存" class="detailPopupSureBtn">
+    <input type="button" value="取消" class="detailPopupCancelBtn">
+</div>
+</body>
+<script>
+    var arr=new Object;
+    var row=0;
+    $(document).ready(function () {
+        createTpye();  //类型出现
+    });
+    function createTpye() {
+        $.ajax({
+            url:"data/newMenu3.json",
+            type:"post",
+            async:false,
+            dataType:"json",
+            success:function (data) {
+                arr=data.resultObj;
+                showhide(arr);
+            }
+        });
+    }
+
+</script>
+</html>

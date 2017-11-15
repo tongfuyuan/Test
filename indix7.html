@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+</body>
+<script>
+    //    var a=1;
+    var b=1;
+    $(document).ready(function () {
+//        b=3;
+        f4();
+        f5();
+    });
+    $(function f1() {
+         b=2;
+    });
+//    f1();
+    function f2() {
+         a=3;
+        f3();
+    };
+    f2();
+    function f3() {
+        console.log(a)
+    };
+    function f4() {
+        b=4;
+    };
+    function f5() {
+        console.log(b)
+    };
+    console.log(a,b);
+</script>
+</html>
