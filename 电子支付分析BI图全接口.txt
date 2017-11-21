@@ -1,0 +1,103 @@
+1.今日收款总额 ,电子支付总额  ,电子支付占比
+ 
+接口：http://saasdemopre.parking24.cn/PortalBilling/surveycontroller/todaySurvey.do
+
+参数：{"time":"2017-10-16","appKey":"1","endTime":"2017-10-16","isTotal":"1"}
+
+数据： {"curPage":0,"data":[{"abnormalAmount":"0.00","apportionmentAmount":"683.57","bProfit":"40,632.52","carParkId":"null","cashAmount":"0.00","collectedAmount":"0.00","costId":"null","discribeId":"null","facilitiesId":"null","longCarIncome":"0.00","measureId":"null","monthBasis":"null","offLineAmount":"0.00","offLineCount":"0","offLineReduction":"0.00","onlineAmount":"0.00","onlineOrder":"0","operateAmount":"40,632.52","otherIncome":"0.00","paidFinance":"0.00","parkAmount":"0.00","parkId":"null","parkingName":"合计","parkinglotProfit":"-","parkinglotUtilization":"null","paymentProportion":"-","profit":"0.00","profitLine":"0.00","receivableAmount":"0.00","recordTime":"null","remainCount":"0","systemId":"null","tempAmount":"39,948.95","todayAmount":"0.00","totalCount":"16989","totalReduction":"0.00","xBAmount":"7,319.25","xBReduction":"170.00","xbpaycount":"364","yearBasis":"null"}],"fieldNumber":0,"message":{"errorCode":"200","errorDsc":"success!"},"pageSize":0,"success":true,"totalRows":0}
+
+备注：  今日收款总额----apportionmentAmount+tempAmount ,电子支付总额 ----- xBAmount,电子支付占比  xBAmount/(apportionmentAmount+tempAmount)
+
+
+
+2.支付总数
+
+接口：http://saasdemopre.parking24.cn/PortalBilling/Billingcontroller/getCustomReports.do
+
+参数：{"reportId":"355","timeType":"date_day","isTotal":"1","time":"2017-10-16 00","endTime":"2017-10-16 23","parkIds":"297501","appKey":"1"}
+
+{"resultObj":{"c0":"362.00","c1":"197.00"},"message":{"errorCode":"200","errorDsc":"success!"},"resultObj2":null}
+
+备注：总笔数----c0,  电子支付笔数-----c1
+
+ 
+
+3.支付分析饼图；
+
+接口 ：/PortalBilling/payOnlineController/payOnline.do
+
+参数： {"reportId":"321","appKey":"1","timeType":"date_day","isTotal":"1","time":"2017-10-16","endTime":"2017-10-16","parkIds":"10001010,10010120"}
+     
+数据：{"resultObj":{"c1":"300.00","c0":"5,783.00"},"message":{"errorCode":"200","errorDsc":"success!"},"resultObj2":null}
+
+备注：    c0----现金缴费 ,  c1----电子自助缴费
+
+
+
+4.线上支付类型分析饼图；
+
+接口：http://saasdemopre.parking24.cn/PortalBilling/payOnlineController/payOnline.do
+
+参数：{"reportId":"330","appKey":"1","timeType":"date_day","isTotal":"1","time":"2017-10-16","endTime":"2017-10-16","parkIds":"10001010,10010120"}
+
+数据：{"resultObj":{"c0":"14.00","c1":"228.00","c2":"0.00","c3":"0.00","c4":"0.00","c5":"72.00","c6":"5,745.00","c7":"0.00"},"message":{"errorCode":"200","errorDsc":"success!"},"resultObj2":null}
+
+备注：  c0----自助缴费机,c1----行呗,c2----停车助手,c3----微信,c4----支付宝,c5----机器人,c6----线下收费系统 ,c7----其他
+
+
+
+5.电子支付金额占比车场排行
+
+接口：http://saasdemopre.parking24.cn/PortalBilling/todaySurveyNew.do
+
+参数：{"startTime":"2017-10-16 00","appKey":"1","endTime":"2017-10-16 23","curPage":1,"pageSize":"5","sortName":"paymentProportion","sortOrder":"desc"}
+
+数据：{"curPage":1,"data":[{"parkinglotUtilization":null,"measureId":null,"parkinglotProfit":null,"yearBasis":null,"facilitiesId":null,"systemid":"608924","collectedAmount":"0.00","xBAmount":"0.00","onlineAmount":"25.00","apportionmentAmount":"7.74","cashAmount":"265.00","costId":null,"sunsTrokeCount":"0","tempAmount":"290.00","totalCount":"500","offLineCount":"0","parkAmount":"0.00","remainCount":"500","parkId":"608924","parkingName":"111","todayAmount":"0.00","xbpaycount":"0","paymentProportion":"8.62%","monthBasis":null,"abnormalAmount":"0.00","stopTime":"0","profit":"0.00","operateAmount":"290.00","courtasyCar":"0","discribeId":null,"bProfit":"290.00","paidFinance":"0.00","receivableAmount":"0.00","xBAmountMoney":"0.00","xBReduction":"0.00","tempAndLong":"0.00","longCarIncome":"0.00","offLineAmount":"0.00","otherIncome":"0.00","recordTime":null,"profitLine":"0.00","offLineReduction":"0.00","totalReduction":"0.00","onlineOrder":"5","offlinetempAmount":"0.00"},{"parkinglotUtilization":null,"measureId":null,"parkinglotProfit":null,"yearBasis":null,"facilitiesId":null,"systemid":"10010133","collectedAmount":"0.00","xBAmount":"0.00","onlineAmount":"15.00","apportionmentAmount":"13.12","cashAmount":"275.00","costId":null,"sunsTrokeCount":"0","tempAmount":"90.00","totalCount":"150","offLineCount":"0","parkAmount":"0.00","remainCount":"150","parkId":"10010133","parkingName":"2222","todayAmount":"0.00","xbpaycount":"0","paymentProportion":"5.17%","monthBasis":null,"abnormalAmount":"0.00","stopTime":"0","profit":"0.00","operateAmount":"290.00","courtasyCar":"0","discribeId":null,"bProfit":"290.00","paidFinance":"0.00","receivableAmount":"0.00","xBAmountMoney":"0.00","xBReduction":"0.00","tempAndLong":"0.00","longCarIncome":"200.00","offLineAmount":"0.00","otherIncome":"0.00","recordTime":null,"profitLine":"0.00","offLineReduction":"0.00","totalReduction":"0.00","onlineOrder":"1","offlinetempAmount":"0.00"},{"parkinglotUtilization":null,"measureId":null,"parkinglotProfit":null,"yearBasis":null,"facilitiesId":null,"systemid":"782135","collectedAmount":"0.00","xBAmount":"0.00","onlineAmount":"33.75","apportionmentAmount":"210.06","cashAmount":"3,956.25","costId":null,"sunsTrokeCount":"0","tempAmount":"1,130.00","totalCount":"3000","offLineCount":"0","parkAmount":"0.00","remainCount":"3000","parkId":"782135","parkingName":"3333","todayAmount":"0.00","xbpaycount":"0","paymentProportion":"0.85%","monthBasis":null,"abnormalAmount":"0.00","stopTime":"0","profit":"0.00","operateAmount":"3,990.00","courtasyCar":"0","discribeId":null,"bProfit":"3,990.00","paidFinance":"0.00","receivableAmount":"0.00","xBAmountMoney":"0.00","xBReduction":"0.00","tempAndLong":"0.00","longCarIncome":"2,860.00","offLineAmount":"0.00","otherIncome":"0.00","recordTime":null,"profitLine":"0.00","offLineReduction":"0.00","totalReduction":"0.00","onlineOrder":"3","offlinetempAmount":"0.00"},{"parkinglotUtilization":null,"measureId":null,"parkinglotProfit":null,"yearBasis":null,"facilitiesId":null,"systemid":"830617","collectedAmount":"0.00","xBAmount":"0.00","onlineAmount":"12.00","apportionmentAmount":"81.62","cashAmount":"9,984.20","costId":null,"sunsTrokeCount":"0","tempAmount":"296.20","totalCount":"440","offLineCount":"0","parkAmount":"0.00","remainCount":"440","parkId":"830617","parkingName":"44444","todayAmount":"0.00","xbpaycount":"0","paymentProportion":"0.12%","monthBasis":null,"abnormalAmount":"0.00","stopTime":"0","profit":"0.00","operateAmount":"9,996.20","courtasyCar":"0","discribeId":null,"bProfit":"9,996.20","paidFinance":"0.00","receivableAmount":"0.00","xBAmountMoney":"0.00","xBReduction":"0.00","tempAndLong":"0.00","longCarIncome":"9,700.00","offLineAmount":"0.00","otherIncome":"0.00","recordTime":null,"profitLine":"0.00","offLineReduction":"0.00","totalReduction":"0.00","onlineOrder":"2","offlinetempAmount":"0.00"},{"parkinglotUtilization":null,"measureId":null,"parkinglotProfit":null,"yearBasis":null,"facilitiesId":null,"systemid":"10001010","collectedAmount":"0.00","xBAmount":"0.00","onlineAmount":"0.00","apportionmentAmount":"0.00","cashAmount":"0.00","costId":null,"sunsTrokeCount":"0","tempAmount":"0.00","totalCount":"1000","offLineCount":"0","parkAmount":"0.00","remainCount":"1000","parkId":"10001010","parkingName":"55555","todayAmount":"0.00","xbpaycount":"0","paymentProportion":"0.00%","monthBasis":null,"abnormalAmount":"0.00","stopTime":"0","profit":"0.00","operateAmount":"0.00","courtasyCar":"0","discribeId":null,"bProfit":"0.00","paidFinance":"0.00","receivableAmount":"0.00","xBAmountMoney":"0.00","xBReduction":"0.00","tempAndLong":"0.00","longCarIncome":"0.00","offLineAmount":"0.00","otherIncome":"0.00","recordTime":null,"profitLine":"0.00","offLineReduction":"0.00","totalReduction":"0.00","onlineOrder":"0","offlinetempAmount":"0.00"}],"array":[],"success":true,"fieldNumber":0,"pageSize":5,"totalRows":23,"message":{"errorCode":"200","errorDsc":"success!"}}
+
+备注：parkingName---车场名称，paymentProportion---占比
+
+
+
+6.电子支付金额占比机构排行
+
+接口：http://saasdemopre.parking24.cn/PortalBilling/Billingcontroller/proportionByArea.do
+
+参数：{"reportId":"356","timeType":"park_hour","startTime":"2017-10-16 00","endTime":"2017-10-16 23","appKey":"1","regionId":"13"}
+
+数据：{"curPage":1,"data":[{"name":"行呗","proportionRegion":"51.67%"},{"name":"测试公司","proportionRegion":"0.00%"},{"name":"杭州分公司","proportionRegion":"31.91%"},{"name":"北京分公司","proportionRegion":"3.46%"},{"name":"武汉分公司","proportionRegion":"0.19%"},{"name":"博文测试（张？）","proportionRegion":"92.72%"}],"fieldNumber":0,"message":{"errorCode":"200","errorDsc":"success!"},"pageSize":0,"success":true,"totalRows":6}
+
+备注：name---机构，proportionRegion---占比
+
+
+
+7.电子支付省份占比
+   a.地图各省标注 
+     接口： http://localhost:8080/PortalParking/CarParkController/v1_1/getRegion.do
+	 参数：{"regionType":"1"}
+     数据：[{"adCode":"","agencyId":"0","cityCode":"010","parentId":"1","regionId":"2","regionName":"北京","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"3","regionName":"安徽","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"4","regionName":"福建","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"5","regionName":"甘肃","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"6","regionName":"广东","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"7","regionName":"广西","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"8","regionName":"贵州","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"9","regionName":"海南","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"10","regionName":"河北","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"11","regionName":"河南","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"12","regionName":"黑龙江","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"13","regionName":"湖北","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"14","regionName":"湖南","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"15","regionName":"吉林","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"16","regionName":"江苏","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"17","regionName":"江西","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"18","regionName":"辽宁","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"19","regionName":"内蒙古","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"20","regionName":"宁夏","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"21","regionName":"青海","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"22","regionName":"山东","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"23","regionName":"山西","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"24","regionName":"陕西","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"25","regionName":"上海","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"26","regionName":"四川","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"27","regionName":"天津","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"28","regionName":"西藏","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"29","regionName":"新疆","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"30","regionName":"云南","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"31","regionName":"浙江","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"32","regionName":"重庆","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"33","regionName":"香港","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"34","regionName":"澳门","regionType":"1"},{"adCode":"","agencyId":"0","cityCode":"","parentId":"1","regionId":"35","regionName":"台湾","regionType":"1"}]
+	
+    b.各个省的集合
+	  接口：http://saasdemopre.parking24.cn/PortalBilling/Billingcontroller/proportionRegion.do
+	  参数：{"reportId":"356","timeType":"date_day","startTime":"2017-10-16 00","endTime":"2017-10-16 23","appKey":"1","regionId":"13"}  
+      数据：{"curPage":1,"data":[{"c0":"6115.6","c0_report_name":"临停收费金额","c1":"6025.0","c1_report_name":"电子支付","proportionRegion":"28.41%","totalAmount":"21206.60","xAxis":"2017-10-16"}],"fieldNumber":0,"message":{"errorCode":"200","errorDsc":"success!"},"pageSize":0,"success":true,"totalRows":2}
+	  
+备注：regionId 各省的code
+      regionName 各省的名称
+	  proportionRegion---支付占比数
+	  totalRows-----车场数
+	  
+	
+	 
+
+
+
+
+
+      
+
+
+
+      
+      
+      
+      
